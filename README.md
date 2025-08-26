@@ -1,2 +1,2 @@
-# LeetCode
-Practive DSA in Leetcode
+# NeetCode
+Practive DSA
