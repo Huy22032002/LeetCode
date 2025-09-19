@@ -1,4 +1,4 @@
-package ArraysAndHashing;
+package ArraysAndHashing.easy;
 
 import java.util.Arrays;
 import java.util.HashSet;
