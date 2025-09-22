@@ -32,8 +32,9 @@ public class ContainsDuplicate {
     public boolean containsDuplicateHashMap(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
         for(int i = 0; i < nums.length; i++) {
-            map.put(nums[i], map.getOrDefault(map.get(i), 0)+1);
+            map.put(nums[i], map.getOrDefault(nums[i], 0)+1);
         }
+        System.out.println(map);
         return map.size() < nums.length;
     }
 
@@ -45,6 +46,6 @@ public class ContainsDuplicate {
 
     public static void main(String[] args) {
         ContainsDuplicate containsDuplicate = new ContainsDuplicate();
-        System.out.println(containsDuplicate.containsDuplicateHashMap(new int[] {1,2,3,4,5,52}));
+        System.out.println(containsDuplicate.containsDuplicateHashMap(new int[] {1,2,3,4,5,52,4}));
     }
 }
