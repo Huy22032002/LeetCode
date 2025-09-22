@@ -7,4 +7,4 @@ Practive DSA
      + isAnagram: (convert to char[] and sort + HashMap)
      + GroupAnagram(medium): (sort String and putIfAbsent)
    MEDIUM:
-     + TopFrequentK: find top K frequent appearances in an array 
+     + TopFrequentK: find top K frequent appearances in an array (int[], String[])
