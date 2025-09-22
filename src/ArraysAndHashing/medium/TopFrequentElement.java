@@ -21,9 +21,27 @@ public class TopFrequentElement {
         return res;
     }
 
+    public String[] topKFrequent(String[] str, int k) {
+        Map<String, Integer> map = new HashMap<>();
+        for(String s: str) {
+            map.put(s, map.getOrDefault(s, 0) +1);
+        }
+        List<String[]> lstString = new ArrayList<>();
+        for(Map.Entry<String, Integer> entry: map.entrySet()) {
+            lstString.add(new String[] {entry.getKey(), entry.getValue().toString()});
+        }
+        lstString.sort((a,b) -> Integer.parseInt(b[1]) - Integer.parseInt(a[1]));
+
+        String[] result = new String[k];
+        for(int i = 0; i < k; i++) {
+            result[i] = lstString.get(i)[0];
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         TopFrequentElement topFrequentElement = new TopFrequentElement();
-        int[] res = topFrequentElement.topKFrequent(new int[] {5,2,5,3,5,3,1,1,3}, 2);
+        String[] res = topFrequentElement.topKFrequent(new String[] {"huy", "trinh", "huy", "trinh", "trinh", "tai"}, 2);
         System.out.println(Arrays.toString(res));
     }
 }
