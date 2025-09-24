@@ -1,4 +1,4 @@
-# NeetCode
+# NeetCode + Leetcode
 Practive DSA
 1) Arrays & Hashing
    EASY:
